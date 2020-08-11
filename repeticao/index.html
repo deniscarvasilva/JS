@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        console.log("for");
+        for (var i = 0; i <= 5; i++) {
+            console.log(i);
+        }
+        console.log("while");
+        var i = 0;
+        while (i <= 5) {
+            console.log(i);
+            i++;
+        }
+
+        //exemplo pratico
+        //quantas vezes podemos dividir um numero por 8 
+        //para ter o resultado de 10?
+        var i = 93473289482748; //nosso numero
+        var j = 0; //nosso contador
+        while (i >= 10) {
+            j++;
+            i /= 3;
+        }
+        console.log(j, 'Vezes');
+    </script>
+</body>
+
+</html>
