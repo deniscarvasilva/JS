@@ -9,14 +9,33 @@
 
 <body>
     <div id="app">
-        <div class="box"></div>
+        <button class="button">Incluir</button>
     </div>
     <script>
-        var boxElement = document.querySelector('.box');
+        var buttonElement = document.querySelector('.button');
+        var appElement = document.querySelector('#app');
 
-        boxElement.style.width = '100px';
-        boxElement.style.height = '100px';
-        boxElement.style.backgroundColor = '#f00';
+        buttonElement.onclick = function() {
+            var boxElement = document.createElement('div');
+
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = '#f00';
+            boxElement.onmouseover = function() {
+                boxElement.style.backgroundColor = getRandomColor();
+            }
+
+            appElement.appendChild(boxElement);
+        }
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
     </script>
 </body>
 

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button onclick="add()">Add</button>
+    </div>
+    <div id="app2"></div>
+    <script>
+        var names = ["Diego", "Gabriel", "Lucas"];
+        var appElement = document.querySelector('#app');
+        var appElement2 = document.querySelector('#app2');
+
+        names.forEach(element => {
+            var ul = createUl(element);
+            appendElement(appElement, ul);
+        });
+
+        function add() {
+            var nome = document.querySelector('input').value;
+            var ul = createUl(nome);
+            if (false) {
+                appendElement(appElement, ul);
+            } else {
+                appendElement(appElement2, ul);
+            }
+            document.querySelector('input').value = '';
+        }
+
+        function appendElement(where, who) {
+            where.appendChild(who);
+        }
+
+        function createUl(name) {
+            var ul = document.createElement('ul');
+            var text = document.createTextNode(name);
+            ul.appendChild(text);
+            return ul;
+        }
+    </script>
+</body>
+
+</html>
