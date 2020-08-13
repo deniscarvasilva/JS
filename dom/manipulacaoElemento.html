@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+    </div>
+
+    <script>
+        var linkElement = document.createElement('a');
+        var textElement = document.createTextNode('Acessando');
+        var containerElement = document.querySelector('#app');
+
+        linkElement.setAttribute('href', 'http://www.google.com');
+        linkElement.appendChild(textElement);
+        containerElement.appendChild(linkElement);
+    </script>
+</body>
+
+</html>
