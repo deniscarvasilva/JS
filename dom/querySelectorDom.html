@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" name="nome">
+        <button class="botao">Clicar aqui</button>
+    </div>
+
+    <script>
+        var botaoElement = document.querySelector('.botao');
+        var inputElement = document.querySelector('input[name=nome]');
+        botaoElement.onclick = function() {
+            var texto = inputElement.value;
+            alert(texto);
+        }
+    </script>
+</body>
+
+</html>
